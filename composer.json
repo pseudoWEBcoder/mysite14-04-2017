@@ -18,7 +18,10 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "trntv/yii2-aceeditor": "2.0.2"
+        "trntv/yii2-aceeditor": "2.0.2",
+        "mdmsoft/yii2-admin": "2.4",
+        "paulzi/yii2-nested-sets": "v1.0.6",
+        "2amigos/yii2-ckeditor-widget": "2.0.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

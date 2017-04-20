@@ -11,7 +11,27 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [/*https://github.com/mdmsoft/yii2-admin/blob/master/docs/guide/basic-usage.md*/
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu', // it can be '@path/to/your/layout'.
+            'controllerMap' => [
+                'assignment' => [
+                    'class' => 'mdm\admin\controllers\AssignmentController',
+                    'userClassName' => '\common\models\User',
+                    'idField' => 'id'
+                ],
+                'other' => [
+                    'class' => 'path\to\OtherController', // add another controller
+                ],
+            ],
+            'menus' => [
+                'assignment' => [
+                    'label' => 'Grand Access' // change label
+                ],
+                'route' => null, // disable menu route
+            ]
+        ]],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
